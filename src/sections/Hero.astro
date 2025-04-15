@@ -1,6 +1,42 @@
-<section class='relative w-screen h-screen'>
-	<div class='absolute bg-[url(/images/home.jpeg)]'></div>
-	<!-- inset-0 bg-cover bg-bottom -->
+---
+import Instagram from '@/assets/svg/instagram.svg'
+import Facebook from '@/assets/svg/facebook.svg'
 
-	<h1>"Una vida hace la diferencia"</h1>
+const iconSize = 38
+---
+
+<section
+	class='relative w-screen h-screen flex flex-col justify-center px-[150px]'
+>
+	<div
+		class='absolute inset-0 bg-cover bg-bottom bg-[url(/images/home.jpeg)] bg-blur-sm'
+	>
+		<div class='absolute inset-0 bg-black/40'></div>
+	</div>
+
+	<div class='z-10 text-white'>
+		<h1 class='text-h1 font-extrabold'>
+			"Una vida hace la<br />diferencia"
+		</h1>
+		<h3 class='text-h3 font-semibold mt-6'>
+			Acompañanos en esta lucha, sumandote como volunatario o colaborando con
+			donaciones.
+		</h3>
+
+		<div
+			class='bg-primary text-primary-btn font-bold w-max text-white py-1.5 px-1 mt-9'
+		>
+			Sumate a nuestra misión
+		</div>
+
+		<div class='flex justify-end items-center gap-6 mt-10'>
+			<a href='#' target='_blank'>
+				<Instagram width={iconSize} height={iconSize} fill='currentColor' />
+			</a>
+
+			<a href='#' target='_blank'>
+				<Facebook width={iconSize} height={iconSize} fill='currentColor' />
+			</a>
+		</div>
+	</div>
 </section>
