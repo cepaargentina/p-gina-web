@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets'
+import localAboutImage from '@/assets/images/about.jpg'
+import SectionWrapper from '@/components/SectionWrapper.astro'
+---
+
+<section class='w-full h-screen bg-base'>
+	<SectionWrapper>
+		<div class='flex relative'>
+			<div
+				class='h-[600px] w-[837px] bg-white ml-7 mt-44 flex items-center z-10'
+			>
+				<div class='ml-14 flex flex-col gap-6'>
+					<span class='text-tags font-medium px-5 py-2 bg-[#E4E8FF] w-max'
+						>CONOCENOS</span
+					>
+					<h2 class='text-h2 font-bold'>¿Quiénes somos?</h2>
+					<p class='w-[688px]'>
+						<span class='font-bold'>CEPA Argentina</span> es una organización sin
+						fines de lucro con 15 años de trayectoria trabajando por un cambio positivo
+						en las comunidades. A través de una red de apoyo comprometida, seguimos
+						brindando servicios esenciales y generando impacto. Vos también podés
+						ser parte: nuestro programa de voluntariado impulsa una de las áreas
+						más activas de la organización.
+					</p>
+					<div
+						class='text-primary font-semibold text-primary-btn border w-max px-20 py-1.5'
+					>
+						Conocé CEPA
+					</div>
+				</div>
+			</div>
+
+			<div
+				class='h-[687px] w-[648px] overflow-hidden mt-32 z-0 absolute right-[40px]'
+			>
+				<div class='absolute inset-0 bg-primary/40'></div>
+				<Image src={localAboutImage} alt='' class='w-full' />
+				<!-- add an alt text -->
+			</div>
+		</div>
+	</SectionWrapper>
+</section>
