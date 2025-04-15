@@ -1,1 +1,17 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+	--text-h1: 68px;
+	--text-h2: 48px;
+	--text-h3: 28px;
+	--text-p: 16px;
+	--text-secondary: 15px;
+	--text-primary-btn: 18px;
+	--text-tags: 12px;
+
+	--color-primary: #ec6a05;
+	--color-secondary: #27348a;
+	--color-accent: #ffed00;
+	--color-base: #f2f2f2;
+	--color-error-urgent: #e30513;
+}
