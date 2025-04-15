@@ -1,42 +1,43 @@
 ---
 import Instagram from '@/assets/svg/instagram.svg'
 import Facebook from '@/assets/svg/facebook.svg'
+import SectionWrapper from '@/components/SectionWrapper.astro'
 
 const iconSize = 38
 ---
 
-<section
-	class='relative w-full h-screen flex flex-col justify-center px-[150px]'
->
+<section class='relative w-full h-screen'>
 	<div
-		class='absolute inset-0 bg-cover bg-bottom bg-[url(/images/home.jpeg)] bg-blur-sm'
+		class='absolute inset-0 bg-cover bg-bottom bg-[url(/images/home.jpeg)] bg-blur-sm -z-10'
 	>
 		<div class='absolute inset-0 bg-black/40'></div>
 	</div>
 
-	<div class='z-10 text-white'>
-		<h1 class='text-h1 font-extrabold'>
-			"Una vida hace la<br />diferencia"
-		</h1>
-		<h3 class='text-h3 font-semibold mt-6'>
-			Acompañanos en esta lucha, sumandote como volunatario o colaborando con
-			donaciones.
-		</h3>
+	<SectionWrapper>
+		<div class='h-full z-10 text-white flex flex-col justify-center pl-32 pr-9'>
+			<h1 class='text-h1 font-extrabold'>
+				"Una vida hace la<br />diferencia"
+			</h1>
+			<h3 class='text-h3 font-semibold mt-6'>
+				Acompañanos en esta lucha, sumandote como volunatario o colaborando con
+				donaciones.
+			</h3>
 
-		<div
-			class='bg-primary text-primary-btn font-bold w-max text-white py-1.5 px-1 mt-9'
-		>
-			Sumate a nuestra misión
+			<div
+				class='bg-primary text-primary-btn font-bold w-max text-white py-1.5 px-1 mt-9'
+			>
+				Sumate a nuestra misión
+			</div>
+
+			<div class='flex justify-end items-center gap-6 mt-10'>
+				<a href='#' target='_blank'>
+					<Instagram width={iconSize} height={iconSize} fill='currentColor' />
+				</a>
+
+				<a href='#' target='_blank'>
+					<Facebook width={iconSize} height={iconSize} fill='currentColor' />
+				</a>
+			</div>
 		</div>
-
-		<div class='flex justify-end items-center gap-6 mt-10'>
-			<a href='#' target='_blank'>
-				<Instagram width={iconSize} height={iconSize} fill='currentColor' />
-			</a>
-
-			<a href='#' target='_blank'>
-				<Facebook width={iconSize} height={iconSize} fill='currentColor' />
-			</a>
-		</div>
-	</div>
+	</SectionWrapper>
 </section>
