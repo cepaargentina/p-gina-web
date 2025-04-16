@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config'
+import { defineConfig, passthroughImageService } from 'astro/config'
 
 import tailwindcss from '@tailwindcss/vite'
 
@@ -9,4 +9,7 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 	},
 	site: 'https://cepaargentina.github.io',
+	image: {
+		service: passthroughImageService(),
+	},
 })
