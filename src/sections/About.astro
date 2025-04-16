@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets'
 import localAboutImage from '@/assets/images/mujer_cepa.jpg'
 import SectionWrapper from '@/components/SectionWrapper.astro'
+import ButtonPrimaryOutline from '@/components/ButtonPrimaryOutline.astro'
 ---
 
 <section class='w-full h-screen bg-base'>
@@ -23,10 +24,8 @@ import SectionWrapper from '@/components/SectionWrapper.astro'
 						ser parte: nuestro programa de voluntariado impulsa una de las áreas
 						más activas de la organización.
 					</p>
-					<div
-						class='text-primary font-semibold text-primary-btn border w-max px-20 py-1.5'
-					>
-						Conocé CEPA
+					<div class='w-72'>
+						<ButtonPrimaryOutline label='Conocé CEPA' />
 					</div>
 				</div>
 			</div>
