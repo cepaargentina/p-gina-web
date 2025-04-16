@@ -1,1 +1,28 @@
-<header></header>
+---
+import { Image } from 'astro:assets'
+import localCepaLogo from '@/assets/images/CEPA-ARGENTINA-LOGO.png'
+
+const logoSize = 60
+---
+
+<header class='w-full fixed top-0 z-20'>
+	<div class='absolute inset-0 bg-black/70 -z-10'></div>
+
+	<div
+		class='w-full max-w-[1440px] mx-auto flex items-center justify-between text-white py-5 px-20'
+	>
+		<Image
+			src={localCepaLogo}
+			alt='Logo de la fundación'
+			width={logoSize}
+			height={logoSize}
+		/>
+		<nav class='flex items-center gap-11'>
+			<a href='#' class='text-p font-medium'>Conocenos</a>
+			<a href='#' class='text-p font-medium'>Novedades</a>
+			<a href='#' class='text-p font-medium'>cursos</a>
+			<a href='#' class='text-p font-medium'>Contactate</a>
+		</nav>
+		<div class='py-1.5 px-12 bg-primary text-primary-btn font-bold'>Donar</div>
+	</div>
+</header>

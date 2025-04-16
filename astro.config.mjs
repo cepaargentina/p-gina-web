@@ -8,4 +8,6 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
+	site: 'https://cepaargentina.github.io',
+	base: 'p-gina-web',
 })
