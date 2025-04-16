@@ -2,11 +2,14 @@
 import Instagram from '@/assets/svg/instagram.svg'
 import Facebook from '@/assets/svg/facebook.svg'
 import SectionWrapper from '@/components/SectionWrapper.astro'
+import Topbar from '@/components/Topbar.astro'
 
 const iconSize = 38
 ---
 
 <section class='relative w-full h-screen'>
+	<Topbar />
+
 	<div
 		class='absolute inset-0 bg-cover bg-bottom bg-[url(/images/fondo_home_cepa.jpg)] bg-blur-sm -z-10'
 	>
@@ -14,7 +17,9 @@ const iconSize = 38
 	</div>
 
 	<SectionWrapper>
-		<div class='h-full z-10 text-white flex flex-col justify-center pl-32 pr-9'>
+		<div
+			class='z-10 text-white flex flex-col justify-center pl-32 pr-9 2xl:mt-60 mt-16'
+		>
 			<h1 class='text-h1 font-extrabold'>
 				"Una vida hace la<br />diferencia"
 			</h1>
@@ -31,11 +36,11 @@ const iconSize = 38
 
 			<div class='flex justify-end items-center gap-6 mt-10'>
 				<a href='#' target='_blank'>
-					<Instagram width={iconSize} height={iconSize} fill='currentColor' />
+					<Instagram width={iconSize} height={iconSize} />
 				</a>
 
 				<a href='#' target='_blank'>
-					<Facebook width={iconSize} height={iconSize} fill='currentColor' />
+					<Facebook width={iconSize} height={iconSize} />
 				</a>
 			</div>
 		</div>

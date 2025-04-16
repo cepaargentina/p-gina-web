@@ -1,0 +1,44 @@
+---
+import bannerGracias from '@/assets/images/banner-gracias-home.jpg'
+import SectionWrapper from '@/components/SectionWrapper.astro'
+---
+
+<section class='w-full h-80 relative'>
+	<div
+		class='absolute inset-0 bg-cover bg-top -z-10'
+		style={`background-image: url(${bannerGracias.src});`}
+	>
+	</div>
+
+	<SectionWrapper>
+		<div class='h-full px-32 py-11 flex justify-between'>
+			<div
+				class='flex flex-col justify-center items-center w-44 rounded-[50%] bg-white/70 h-44 p-2.5'
+			>
+				<span class='text-secondary font-bold text-h2'>+120</span>
+				<span>Voluntarios</span>
+			</div>
+
+			<div
+				class='flex flex-col justify-center items-center w-44 rounded-[50%] bg-white/70 h-44 p-2.5 mt-7'
+			>
+				<span class='text-secondary font-bold text-h2'>+10</span>
+				<span>Años</span>
+			</div>
+
+			<div
+				class='flex flex-col justify-center items-center w-44 rounded-[50%] bg-white/70 h-44 p-2.5'
+			>
+				<span class='text-secondary font-bold text-h2'>+7</span>
+				<span>Localidades</span>
+			</div>
+
+			<div
+				class='flex flex-col justify-center items-center w-44 rounded-[50%] bg-white/70 h-44 p-2.5 mt-7'
+			>
+				<span class='text-secondary font-bold text-h2'>+1000</span>
+				<span>Donaciones</span>
+			</div>
+		</div>
+	</SectionWrapper>
+</section>
