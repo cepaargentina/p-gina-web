@@ -1,0 +1,47 @@
+---
+import EssentialCard from '@/components/EssentialCard.astro'
+import SectionWrapper from '@/components/SectionWrapper.astro'
+import Hand from '@/assets/svg/hand.svg'
+import Handshake from '@/assets/svg/handshake.svg'
+import HandHeart from '@/assets/svg/hand-heart.svg'
+
+const iconSize = 54
+---
+
+<section class='w-full h-screen bg-base'>
+	<SectionWrapper>
+		<div class='flex h-full items-center justify-between px-20'>
+			<EssentialCard title='Quiero donar' buttonLabel='Colaborar'>
+				<HandHeart slot='card-svg' width={iconSize} height={iconSize} />
+				<span slot='card-description'
+					>Con tu ayuda, podemos acceder a los materiales que necesitamos para
+					brindar asistencia humanitaria. Podés colaborar con una donación
+					económica o aportar insumos esenciales. <br />
+					<span class='text-primary font-bold'>Cada contribución suma.</span>
+				</span>
+			</EssentialCard>
+
+			<EssentialCard title='Nuestra misión' buttonLabel='Ver actividades'>
+				<Hand slot='card-svg' width={iconSize} height={iconSize} />
+				<span slot='card-description'
+					>Trabajamos para prevenir y aliviar el sufrimiento humano, sin
+					distinción de origen, género, creencias o ideologías.
+				</span>
+			</EssentialCard>
+
+			<EssentialCard title='Voluntarios' buttonLabel='Unite como voluntario'>
+				<Handshake slot='card-svg' width={iconSize} height={iconSize} />
+				<span slot='card-description'>
+					<span>
+						Informate sobre todo lo que podes aprender y realizar como
+						voluntario.
+					</span>
+					<span class='mt-10 inline-block'>
+						¡Ganate un lugar en nuestra
+						<span class='text-primary font-bold'>familia naranja</span>!
+					</span>
+				</span>
+			</EssentialCard>
+		</div>
+	</SectionWrapper>
+</section>
