@@ -9,6 +9,7 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 	},
 	site: 'https://cepaargentina.github.io',
+	base: '/p-gina-web/',
 	image: {
 		service: passthroughImageService(),
 	},
