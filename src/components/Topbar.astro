@@ -6,23 +6,41 @@ const logoSize = 60
 ---
 
 <header class='w-full fixed top-0 z-20'>
-	<div class='absolute inset-0 bg-black/70 -z-10'></div>
+	<div class='relative'>
+		<div class='absolute inset-0 bg-black/70 -z-10'></div>
 
-	<div
-		class='w-full max-w-[1440px] mx-auto flex items-center justify-between text-white py-5 px-20'
-	>
-		<Image
-			src={localCepaLogo}
-			alt='Logo de la fundación'
-			width={logoSize}
-			height={logoSize}
-		/>
-		<nav class='flex items-center gap-11'>
-			<a href='#' class='text-p font-medium'>Conocenos</a>
-			<a href='#' class='text-p font-medium'>Novedades</a>
-			<a href='#' class='text-p font-medium'>cursos</a>
-			<a href='#' class='text-p font-medium'>Contactate</a>
-		</nav>
-		<div class='py-1.5 px-12 bg-primary text-primary-btn font-bold'>Donar</div>
+		<div
+			class='w-full max-w-[1440px] mx-auto flex items-center justify-between text-white py-5 px-20'
+		>
+			<Image
+				src={localCepaLogo}
+				alt='Logo de la fundación'
+				width={logoSize}
+				height={logoSize}
+			/>
+			<nav class='flex items-center gap-11'>
+				<a href='#' class='text-p font-medium'>Conocenos</a>
+				<a href='#' class='text-p font-medium'>Novedades</a>
+				<a href='#' class='text-p font-medium'>cursos</a>
+				<a href='#' class='text-p font-medium'>Contactate</a>
+			</nav>
+			<div class='py-1.5 px-12 bg-primary text-primary-btn font-bold'>
+				Donar
+			</div>
+		</div>
+	</div>
+
+	<div class='relative'>
+		<div class='absolute inset-0 bg-[#222222]/54 -z-10 backdrop-blur-md'></div>
+		<ul
+			class='w-full max-w-[1440px] mx-auto flex items-center justify-between py-1 text-[#D0D0D0] font-medium px-2.5'
+		>
+			<li>100 Bomberos</li>
+			<li>101 Policías</li>
+			<li>103 Defensa Civil</li>
+			<li>106 Prefectura</li>
+			<li>107 Sistema de Salud</li>
+			<li>911 Emergencias</li>
+		</ul>
 	</div>
 </header>
