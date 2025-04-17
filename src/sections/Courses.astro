@@ -1,0 +1,17 @@
+---
+import CarrouselHeader from '@/components/CarrouselHeader.astro'
+import CourseCard from '@/components/CourseCard.astro'
+import SectionWrapper from '@/components/SectionWrapper.astro'
+---
+
+<section class='w-full h-screen bg-base snap-start'>
+	<SectionWrapper>
+		<div class='w-full h-full px-16 pt-10 2xl:pt-24'>
+			<CarrouselHeader tagLabel='cursos' title='Nuestros cursos' />
+
+			<div class='mt-8 2xl:mt-12'>
+				<CourseCard />
+			</div>
+		</div>
+	</SectionWrapper>
+</section>

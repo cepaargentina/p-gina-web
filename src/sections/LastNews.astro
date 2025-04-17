@@ -1,30 +1,16 @@
 ---
 import SectionWrapper from '@/components/SectionWrapper.astro'
-import Tag from '@/components/Tag.astro'
-import CircleArrowLeft from '@/assets/svg/circle-arrow-left.svg'
-import CircleArrowRight from '@/assets/svg/circle-arrow-right.svg'
-import ListFilter from '@/assets/svg/list-filter.svg'
 import PostCard from '@/components/PostCard.astro'
-
-const iconSize = 32
+import CarrouselHeader from '@/components/CarrouselHeader.astro'
 ---
 
 <section class='w-full h-screen bg-base snap-start'>
 	<SectionWrapper>
 		<div class='w-full h-full px-16 pt-10 2xl:pt-24'>
-			<div class='flex'>
-				<div class='w-full'>
-					<Tag label='NOVEDADES' />
-					<h2 class='text-h2 font-bold'>Conocé nuestras últimas noticias</h2>
-				</div>
-				<div class='w-[20%] text-secondary flex justify-between'>
-					<ListFilter width={iconSize} height={iconSize} />
-					<div class='flex gap-5'>
-						<CircleArrowLeft width={iconSize} height={iconSize} />
-						<CircleArrowRight width={iconSize} height={iconSize} />
-					</div>
-				</div>
-			</div>
+			<CarrouselHeader
+				tagLabel='NOVEDADES'
+				title='Conocé nuestras últimas noticias'
+			/>
 
 			<div class='w-full overflow-x-hidden h-full mt-8 2xl:mt-16'>
 				<div class='flex w-max gap-10'>
