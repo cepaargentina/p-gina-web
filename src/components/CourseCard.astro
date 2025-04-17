@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets'
+import courseCardImage from '@/assets/images/PA_cursos_home.png'
+import Tag from '@/components/Tag.astro'
+import FilterTag from '@/components/FilterTag.astro'
+import ButtonPrimaryOutline from './ButtonPrimaryOutline.astro'
+import CourseDetail from './CourseDetail.astro'
+import MapPin from '@/assets/svg/map-pin.svg'
+import Calendar from '@/assets/svg/calendar.svg'
+import Clock from '@/assets/svg/clock.svg'
+import CircleDolarSign from '@/assets/svg/circle-dolar-sign.svg'
+
+const iconSize = 24
+---
+
+<article class='shadow-lg bg-white flex w-full'>
+	<div
+		class='w-[35%] h-[504px] 2xl:w-[45%] 2xl:h-[604px] relative overflow-hidden'
+	>
+		<div class='absolute inset-0 bg-primary/20'></div>
+		<Image src={courseCardImage} alt='' class='w-full h-full' />
+	</div>
+
+	<div class='px-20 py-12 flex flex-col justify-between w-[65%] 2xl:w-[55%]'>
+		<div>
+			<Tag label='Inicial' />
+			<h3 class='text-h3 font-semibold'>Curso de primeros auxilios básicos</h3>
+		</div>
+		<div class='flex items-center w-max gap-5'>
+			<FilterTag label='mercedes' />
+			<FilterTag label='caba' />
+			<FilterTag label='trelew' />
+			<FilterTag label='puerto madryn' />
+		</div>
+
+		<CourseDetail>
+			<MapPin width={iconSize} height={iconSize} /> Dirección: Club de Osos. Humberto
+			Primo 1664.
+		</CourseDetail>
+		<CourseDetail
+			><Calendar width={iconSize} height={iconSize} /> Fechas: 5, 6 y 12 de abril
+			<Clock width={iconSize} height={iconSize} /> 9:00 a 18:00 h
+		</CourseDetail>
+		<CourseDetail
+			><CircleDolarSign width={iconSize} height={iconSize} /> Valor: $ 7.500
+		</CourseDetail>
+
+		<div class='w-[300px]'>
+			<ButtonPrimaryOutline label='Ver curso' />
+		</div>
+	</div>
+</article>

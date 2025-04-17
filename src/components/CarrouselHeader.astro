@@ -1,0 +1,29 @@
+---
+import CircleArrowLeft from '@/assets/svg/circle-arrow-left.svg'
+import CircleArrowRight from '@/assets/svg/circle-arrow-right.svg'
+import ListFilter from '@/assets/svg/list-filter.svg'
+import Tag from '@/components/Tag.astro'
+
+const iconSize = 32
+
+interface Props {
+	tagLabel: string
+	title: string
+}
+
+const { tagLabel, title } = Astro.props
+---
+
+<div class='flex'>
+	<div class='w-full'>
+		<Tag label={tagLabel} />
+		<h2 class='text-h2 font-bold'>{title}</h2>
+	</div>
+	<div class='w-[20%] text-secondary flex justify-between'>
+		<ListFilter width={iconSize} height={iconSize} />
+		<div class='flex gap-5'>
+			<CircleArrowLeft width={iconSize} height={iconSize} />
+			<CircleArrowRight width={iconSize} height={iconSize} />
+		</div>
+	</div>
+</div>
