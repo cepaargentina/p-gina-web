@@ -3,18 +3,17 @@ import { Image } from 'astro:assets'
 import localAboutImage from '@/assets/images/mujer_cepa.jpg'
 import SectionWrapper from '@/components/SectionWrapper.astro'
 import ButtonPrimaryOutline from '@/components/ButtonPrimaryOutline.astro'
+import Tag from '@/components/Tag.astro'
 ---
 
-<section class='w-full h-screen bg-base'>
+<section class='w-full h-screen bg-base snap-start'>
 	<SectionWrapper>
 		<div class='flex relative'>
 			<div
 				class='h-[500px] w-[800px] 2xl:h-[600px] 2xl:w-[837px] bg-white ml-20 2xl:ml-7 mt-26 2xl:mt-44 flex items-center z-10'
 			>
 				<div class='ml-14 flex flex-col gap-6'>
-					<span class='text-tags font-medium px-5 py-2 bg-[#E4E8FF] w-max'
-						>CONOCENOS</span
-					>
+					<Tag label='CONOCENOS' />
 					<h2 class='text-h2 font-bold'>¿Quiénes somos?</h2>
 					<p class='w-[688px]'>
 						<span class='font-bold'>CEPA Argentina</span> es una organización sin
