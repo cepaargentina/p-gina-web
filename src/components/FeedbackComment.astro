@@ -1,0 +1,13 @@
+---
+interface Props {
+	author: string
+	comment: string
+}
+
+const { author, comment } = Astro.props
+---
+
+<div class='text-center w-[351px]'>
+	<p class='text-p text-white font-medium'>"{comment}"</p>
+	<h3 class='font-semibold text-h3 text-primary mt-10'>— {author}</h3>
+</div>

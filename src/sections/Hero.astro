@@ -3,6 +3,7 @@ import Instagram from '@/assets/svg/instagram.svg'
 import Facebook from '@/assets/svg/facebook.svg'
 import SectionWrapper from '@/components/SectionWrapper.astro'
 import Topbar from '@/components/Topbar.astro'
+import backgroundHero from '@/assets/images/fondo_home_cepa.jpg'
 
 const iconSize = 38
 ---
@@ -11,9 +12,10 @@ const iconSize = 38
 	<Topbar />
 
 	<div
-		class='absolute inset-0 bg-cover bg-bottom bg-[url(/images/fondo_home_cepa.jpg)] bg-blur-sm -z-10'
+		class='absolute inset-0 bg-cover bg-bottom bg-blur-sm -z-10'
+		style={`background-image: url(${backgroundHero.src})`}
 	>
-		<div class='absolute inset-0 bg-black/40'></div>
+		<div class='absolute inset-0 bg-black/50'></div>
 	</div>
 
 	<SectionWrapper>

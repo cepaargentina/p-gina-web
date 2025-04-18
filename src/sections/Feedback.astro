@@ -1,0 +1,31 @@
+---
+import backgroundFeedback from '@/assets/images/fondo_valores_conocenos.jpg'
+import FeedbackComment from '@/components/FeedbackComment.astro'
+import SectionWrapper from '@/components/SectionWrapper.astro'
+---
+
+<section class='w-full h-[678px] snap-start relative'>
+	<div
+		class='absolute inset-0 bg-cover bg-bottom -z-10'
+		style={`background-image: url(${backgroundFeedback.src})`}
+	>
+		<div class='bg-black/60 absolute inset-0'></div>
+	</div>
+
+	<SectionWrapper>
+		<div class='flex justify-between w-full h-full items-center px-12'>
+			<FeedbackComment
+				author='Sofía, voluntaria Avellaneda'
+				comment='Me sumé como voluntaria en 2022 y hoy coordino un nodo en Avellaneda. CEPA cambió mi forma de mirar la realidad.'
+			/>
+			<FeedbackComment
+				author='Julián, voluntario en La Plata'
+				comment='Descubrí en CEPA una forma concreta de ayudar. Hoy sé que con pequeñas acciones, generamos un gran impacto.'
+			/>
+			<FeedbackComment
+				author='Micaela, equipo de comunicación'
+				comment='En cada operativo me di cuenta de que el impacto va en doble vía: ayudamos, pero también recibimos muchísimo.'
+			/>
+		</div>
+	</SectionWrapper>
+</section>
